@@ -12,7 +12,7 @@ async function bootstrap() {
   app.use(cookieParser());
 
   app.enableCors({
-    origin: process.env.FRONTEND_URL || 'https://burger-station-frontend.vercel.app',
+    origin: process.env.FRONTEND_URL || 'https://burger-station-frontend-ten.vercel.app',
     credentials: true,
   });
 
