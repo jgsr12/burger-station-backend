@@ -8,6 +8,7 @@ import { UsersModule } from './users/users.module';
 import { MenuModule } from './menu/menu.module';
 import { OrdersModule } from './orders/orders.module';
 import { SeedModule } from './seeder/seed.module';
+import { SendgridService } from './sendgrid/sendgrid.service';
 
 @Module({
   imports: [
@@ -37,6 +38,6 @@ import { SeedModule } from './seeder/seed.module';
     SeedModule
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, SendgridService],
 })
 export class AppModule {}
