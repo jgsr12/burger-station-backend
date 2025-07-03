@@ -6,7 +6,7 @@ import { Side } from '../menu/entities/side.entity';
 import { Drink } from '../menu/entities/drink.entity';
 import { config } from 'dotenv';
 
-config(); // Cargar .env
+config();
 
 const dataSource = new DataSource({
   type: 'mysql',
