@@ -37,8 +37,8 @@ export class AuthService {
 
     res.cookie('jwt', token, {
       httpOnly: true,
-      sameSite: 'lax',
-      secure: false,
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+      secure: process.env.NODE_ENV === 'production',
     });
 
     return { message: 'Login exitoso', token };
